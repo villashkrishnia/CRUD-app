@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Node.js express mongoDB CRUD</title>
+</head>
+
+<body>
+    <h3><a href='/'>add blog</a></h3>
+    <table>
+        <thead>
+            <tr>
+                <th>blogname </th>
+                <th>blogcontent</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list }}
+            <tr>
+                <td>{{this.blogname}}</td>
+                <td>{{this.blogcontent}}</td>
+                <td><a href="/update/{{this._id}}">update</a></td>
+                <td><a href="/delete/{{this._id}}">delete</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+
+</html>

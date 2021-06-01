@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Node.js express mongoDB CRUD</title>
+    <style>
+        .cs{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>{{viewTitle}}</h3>
+    <form action="/" method='POST'>
+        <div><input type="hidden" name='_id' value="{{u._id}}"></div>
+        <div><input type='text' name='blogname' placeholder="Enter your blogname" value="{{u.blogname}}"></div>
+        <div><input type='text' class='cs' name='blogcontent' placeholder="Enter your blog" value="{{u.blogcontent}}"></div>
+        <div><button type='submit'>upload</button></div>
+        <div><a href='/list'>view blogs</a></div>
+    </form>
+</body>
+
+</html>
